@@ -1,46 +1,46 @@
-"""a)Load the â€˜Black Fridayâ€™ dataset into one of the data structures (NumPy or Pandas).\n",
+"""a)Load the ‘Black Friday’ dataset into one of the data structures (NumPy or Pandas).\n",
     "b)Display header rows and description of the loaded dataset.\n",
-"""
+    """
 import pandas as pd
 import numpy as np
 
 df = pd.read_csv("blackfri.csv")
-print("\<-----Data Information----->\")
+print("/<-----Data Information----->/")
 print("Head of Dataset")
 print(df.head(5))
 print("Head of Dataset")
 print(df.describe())
 print(df.info())
 
-"""c) Remove unnecessary features (E.g. drop unwanted columns) from the dataset such as â€˜User_IDâ€™, â€˜Product_ID â€˜ â€˜Stay_In_Current_City_Yearsâ€™"""
+"""c) Remove unnecessary features (E.g. drop unwanted columns) from the dataset such as ‘User_ID’, ‘Product_ID ‘ ‘Stay_In_Current_City_Years’"""
 df.drop(['User_ID','Product_ID','Stay_In_Current_City_Years'], axis=1, inplace=True)
 print(df.head(5))
    
-"""d) Manipulate data by replacing empty column values in â€˜City_Categoryâ€™ with a default value for the city. """
+"""d) Manipulate data by replacing empty column values in ‘City_Category’ with a default value for the city. """
 print("Filling empty values")
-df['City_Category'] = df['City_Category'].fillna(\"A\")
+df['City_Category'] = df['City_Category'].fillna("A")
 print(df.head(5))
 
-"""e) Convert the attribute â€˜City_Categoryâ€™ to have â€˜Aâ€™ to be â€˜Metro Citiesâ€™, â€˜Bâ€™ to be â€˜Small Townsâ€™ ,  â€˜Câ€™ to be â€˜Villagesâ€™."""
+"""e) Convert the attribute ‘City_Category’ to have ‘A’ to be ‘Metro Cities’, ‘B’ to be ‘Small Towns’ ,  ‘C’ to be ‘Villages’."""
 print("Mapping values/attributes in City_Category to types")
 df['City_Category'] = df['City_Category'].map({'A':'Metro cities','B':'Small Towns','C':'Villages'})
 print(df.head(5))
 
-"""f) Rename the attribute â€˜Product_Category_1â€™ to have â€˜Baseball Capsâ€™, \n",
-    "â€˜Product_Category_2â€™ to have â€˜Wine Tumblersâ€™ and â€˜Product_Category_3â€™ to \n",
-    "have â€˜Pet Raincoatsâ€™\n",
+"""f) Rename the attribute ‘Product_Category_1’ to have ‘Baseball Caps’, \n",
+    "‘Product_Category_2’ to have ‘Wine Tumblers’ and ‘Product_Category_3’ to \n",
+    "have ‘Pet Raincoats’\n",
     """
 print("Renaming the column names")
 df.rename(columns={'Product_Category_1':'Baseball_Caps','Product_Category_2':'Wine_Tumblers','Product_Category_3':'Pet_Raincoats'},inplace=True)
 print(df.head(5))
 
-"""g) Convert the attribute â€˜Marital_Statusâ€™ to have â€˜1:Marriedâ€™ and â€˜0:Un-Marriedâ€™\n","""
+"""g) Convert the attribute ‘Marital_Status’ to have ‘1:Married’ and ‘0:Un-Married’\n","""
 print("Mapping values/attributes in Marital Status to types")
 df['Marital_Status'] = df['Marital_Status'].map({1:'Married',0:'Un-Married'})
 print(df.head(5))
 
 """h) Perform the following visualizations on the loaded dataset:\n",
-    "i)   Tally of the Number of Male & Female who bought â€˜Product_Category_3(Pet_Raincoats)â€™. \n",
+    "i)   Tally of the Number of Male & Female who bought ‘Product_Category_3(Pet_Raincoats)’. \n",
     """
 import matplotlib.pyplot as plt
 import seaborn as sns
