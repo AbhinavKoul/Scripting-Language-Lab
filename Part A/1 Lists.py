@@ -7,8 +7,8 @@ for i in range(0,size):
 	ele = int(input("enter elements of list"))
 	a.append(ele)
 
-#OR
-a = [* map(int,input("Enter elements of list").split())]
+# #OR
+# a = [* map(int,input("Enter elements of list").split())]
 
 print("The list contains",a)
 

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            CALCULATOR
+        </title>
+    </head>
+
+
+    <BODY>
+        Operand 1 :<input type = "number" id="n1"> 
+        Operand 2 :<input type = "number" id ="n2">
+        <br>
+        <input type = "radio" name = "operation" id = "op1"> Add
+        <input type = "radio" name = "operation" id = "op2"> Subtract
+        <input type = "radio" name = "operation" id = "op3"> Multiply
+        <input type = "radio" name = "operation" id = "op4"> Divide
+        <br>
+
+        <input type = "submit" onclick="res()">
+        <p id = "res"></p>
+        <script>
+            function res(){
+                x = parseInt(document.getElementById("n1").value);
+                y = parseInt(document.getElementById("n2").value);
+
+                if(document.getElementById("op1").checked)
+                    document.getElementById("res").innerHTML = x+y;
+                if(document.getElementById("op2").checked)
+                    document.getElementById("res").innerHTML = x - y;
+                if(document.getElementById("op3").checked)
+                    document.getElementById("res").innerHTML = x*y;
+                if(document.getElementById("op4").checked)
+                    document.getElementById("res").innerHTML = x/y;
+            }
+        </script>
+    </BODY>
+</html>

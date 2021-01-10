@@ -3,6 +3,7 @@
 <head>
   <title>Shopping Cart</title>
   <script type="text/javascript">
+    
     function submit() {
       var cakeQuantity = document.getElementById("cakeQuantity").value;
       var cookieQuantity = document.getElementById("cookieQuantity").value;
@@ -18,10 +19,12 @@
         alert("Invalid a valid positive integer");
       }
     }
+
     function isNormalInteger(str) {
       var n = Math.floor(Number(str));
       return String(n) === str && n >= 0;
     }
+    
   </script>
 </head>
 <body>

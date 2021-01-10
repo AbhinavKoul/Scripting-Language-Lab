@@ -11,24 +11,21 @@ class Student:
 		self.age = input("Enter age: ")
 		print("Enter marks of subjects\n")
 		l = input()
-		l = l.split(" ")
+		l = l.split(" ") ['67', '87', '67']
 		x = []
 		for i in range(len(l)):
 			x.append(int(l[i]))
-			self.sublist = x
+		
+		self.sublist = x
 	def disp(self):
 		print(self.name)
 		print(self.age)
 		print(self.sublist)
 
-
-
-
-
 s1 = Student('shri',20,[90,80,95])
 s1.disp()
 
-s2 = Student('sanj',23,[60,82,75])
+s2 = Student()
 s2.disp()
 s2.accept()
 s2.disp()

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>CUSTOMER FEEDBACK</title>
+    </head>
+
+    <body>
+        Name : <input type="text" id = "1"><br>
+        Gender :    <input type="radio" name = "gender" id = "op1"> Male
+                    <input type="radio" name = "gender" id = "op2"> Female
+                    <input type="radio" name = "gender" id = "op3"> Other
+        <br>
+        
+        Feedback : <textarea cols="50" rows="20" id = "feed"></textarea>
+        <br><input type="submit" value="Submit" onclick="res()"></body><br>
+        <br>
+        <p id = "res"></p>
+        <p id = "gen"></p>
+        <p id = "phara"></p>
+        <script>
+            function res(){
+                n = document.getElementById("1").value;
+                
+                document.getElementById("res").innerHTML = "Name is : " + n;
+                
+                if(document.getElementById("op1").checked)
+                    document.getElementById("gen").innerHTML = "\n Gender is : " + "MALE";
+                if(document.getElementById("op2").checked)
+                    document.getElementById("gen").innerHTML = "\n Gender is : " + "FEMALE";
+                if(document.getElementById("op3").checked)
+                    document.getElementById("gen").innerHTML = "\n Gender is : " + "OTHER";
+                
+                f = document.getElementById("feed").value;
+                document.getElementById('phara').innerHTML = "\n FEEDBACK IS : " + f;
+            
+                }
+        </script>
+    </body>
+</html>

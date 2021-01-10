@@ -5,7 +5,7 @@ class Rectangle:
 	def area(self):
 		print("The area of the given rectangle is",self.l*self.b)
 	
-	def permimerter(self,a:int)->bool:
+	def permimerter(self,a):
 		if(self.l + self.b > a):
 			return True
 		else:
