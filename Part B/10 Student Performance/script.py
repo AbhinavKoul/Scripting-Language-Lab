@@ -6,7 +6,7 @@ studperf_df=pd.read_csv('StudentsPerformance.csv')
 studperf_df.info()
 studperf_df.info(verbose=False) # short summary 
 studperf_df.describe()
-print(studperf_df.head(15))
+print(studperf_df.head(15))  
 #Remove unnecessary features (E.g. drop unwanted columns) from the dataset such as ‘lunch’ and ‘test preparation course’
 stuperf_df = studperf_df.drop(['lunch'], axis=1,inplace = False)
 print('\\n====Understanding Inplace False : The Copied Dataframe====')
