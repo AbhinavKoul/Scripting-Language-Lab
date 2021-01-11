@@ -22,30 +22,28 @@ window.onload = function() {
     ];
 
     //Generate HTML for Menu Bar
-    teslaModels.forEach(function(item,index){
-        listElemet = document.createElement("th")
-        listElemet.id = item.model
-        listElemet.innerHTML = item.name
-        document.getElementById("menu").appendChild(listElemet)
+    teslaModels.forEach(function(item){
+        listElemet = document.createElement("td");
+        listElemet.id = item.model;
+        listElemet.innerHTML = item.name;
+        document.getElementById("menu").appendChild(listElemet);
     })
 
     // add event handler for mouseover on each img:
     teslaModels.forEach(mouseOverHandler);
-    function mouseOverHandler(item, index)
+    function mouseOverHandler(item)
     {
         var elem = document.getElementById(item.model);
         elem.onmouseover = function(){
              var details = item;
-            // if found, update DOM with information from array
-            if(details!=null)
-            {
+           
                 document.getElementById("data-table").removeAttribute('hidden');
                 document.getElementById("model").innerHTML = details.name;
                 document.getElementById("picture").innerHTML = '<img src="img/'+details.model+'.png"/>';
                 document.getElementById("price").innerHTML = "$"+details.price;
                 document.getElementById("year").innerHTML = details.year;
 
-            }
+            
         }
     }
 
