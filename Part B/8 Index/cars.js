@@ -1,4 +1,4 @@
-window.onload = function() {
+    window.onload = function() {
 
     var teslaModels = [
         {
@@ -18,7 +18,7 @@ window.onload = function() {
             "name": "Model 3",
             "price": 35000,
             "year": 2017
-        },
+        }
     ];
 
     //Generate HTML for Menu Bar
@@ -35,7 +35,7 @@ window.onload = function() {
     {
         var elem = document.getElementById(item.model);
         elem.onmouseover = function(){
-             var details = item;
+                var details = item;
            
                 document.getElementById("data-table").removeAttribute('hidden');
                 document.getElementById("model").innerHTML = details.name;

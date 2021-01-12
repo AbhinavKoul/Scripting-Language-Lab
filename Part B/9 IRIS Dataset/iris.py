@@ -15,8 +15,8 @@ print("======Data Headers after Dropping Columns=======")
 df.drop(['Sepal_Length'], inplace=True,axis=1)
 print(df.head(5))
 
-"""ndf = pd.DataFrame(columns=['Class','Petal_Width'])
-ndf.groupby(['Class'],as_index=False).mean()"""
+ndf = pd.DataFrame(columns=['Class','Petal_Width'])
+ndf.groupby(['Class'],as_index=False).mean()
 
 plt.figure(figsize=[12,6]) # to create a wider graph\n",
 ax = sns.countplot(data = df,hue = 'Class',palette='Set1',x = ' Sepal_Width')

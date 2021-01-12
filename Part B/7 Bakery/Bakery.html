@@ -9,6 +9,7 @@
       var cookieQuantity = document.getElementById("cookieQuantity").value;
       var cakeSelected = document.getElementById("cake").checked;
       var cookieSelected = document.getElementById("cookies").checked;
+      
       if(cakeSelected && cakeQuantity && isNormalInteger(cakeQuantity)){
         alert("Bill for cake = "+(parseInt(cakeQuantity)*100))
       }else if(cookieSelected && cookieQuantity && isNormalInteger(cookieQuantity)){

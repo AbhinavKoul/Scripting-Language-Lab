@@ -11,7 +11,7 @@ class Student:
 		self.age = input("Enter age: ")
 		print("Enter marks of subjects\n")
 		l = input()
-		l = l.split(" ") ['67', '87', '67']
+		l = l.split(" ") #['67', '87', '67']
 		x = []
 		for i in range(len(l)):
 			x.append(int(l[i]))
