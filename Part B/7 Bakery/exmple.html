@@ -1,6 +1,7 @@
 <html>
     <head><title>Bakery</title></head>
     <body>
+        
         Cake:<br><input type="radio" name="item" id="cake">
         <br><img src="cake.png" width=100px>
         <br>Quantity<input type="number" id="1">
@@ -9,11 +10,14 @@
         <br>Quantity<input type="number" id="2">
         <br>
         <input type="submit" value="Submit" onclick="result()">
+        
         <script>
+
             function result(){
                 if(document.getElementById("cake").checked)
                     alert(parseInt(document.getElementById("1").value)*100);
             }
+
         </script>
 
     </body>
